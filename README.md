@@ -12,7 +12,7 @@ nohup stringtie -p 10 \
 -e -o $out1_road/${i}.gtf \
 -B \
 -A /$out1_road/${i}.tab \
-/$in1_road/${i} > ./log//${i}-log &
+\$in1_road/${i} > ./log/\${i}-log &
 
 #本脚本即用在处理${i}.gtf 构建FPKM值得矩阵
 使用
