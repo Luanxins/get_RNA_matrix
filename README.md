@@ -13,7 +13,7 @@
 **本脚本即用在处理${i}.gtf 构建FPKM值得矩阵**
 
 ```
-python3.0 getFPKM.py -input list -g GENE_FPKM -t TRANSCRIPT_FPKM
+python3.0 getFPKM.py -i list -g GENE_FPKM -t TRANSCRIPT_FPKM
 ```
 input list文件应该输入一个制表符分隔的文件，每一行包含样本ID和gtf文件路径，例如：
 ```
