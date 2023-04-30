@@ -8,11 +8,11 @@ hisat2-build -f  基因.fasta 索引名字
 hisat2 --dta -x genome-index  -1 clean.R1.fastq.gz -2 clean.R2.fastq.gz | samtools view -b -S -|samtools sort -@ 25 > ./${i}.bam
 第三步：开始计算定量：stringtie
 nohup stringtie -p 10 \
--G $in_road/genom.gff3 \
--e -o $out1_road/${i}.gtf \
+-G ${in_road}/genom.gff3 \
+-e -o ${out1_road}/${i}.gtf \
 -B \
--A /$out1_road/${i}.tab \
-$in1_road/${i} > ./log/\${i}-log &
+-A /${out1_road}/${i}.tab \
+${in1_road}/${i} > ./log/\${i}-log &
 
 #本脚本即用在处理${i}.gtf 构建FPKM值得矩阵
 使用
@@ -26,4 +26,4 @@ sampleB B.stringtie.gtf
 ```
 
 需要注意的是
-``输出文件第二行可能是错误的，自己手动删除``
+#``输出文件第二行可能是错误的，自己手动删除``
