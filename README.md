@@ -11,8 +11,8 @@ nohup stringtie -p 10 \
 -G $in_road/genom.gff3 \
 -e -o $out1_road/${i}.gtf \
 -B \
--A $out1_road/${i}.tab \
-$in1_road/${i} > ./log/${i}-log &
+-A /$out1_road/${i}.tab \
+/$in1_road/${i} > ./log//${i}-log &
 
 #本脚本即用在处理${i}.gtf 构建FPKM值得矩阵
 使用
@@ -26,4 +26,4 @@ sampleB B.stringtie.gtf
 ```
 
 需要注意的是
-<span style=“color:red”>输出文件第二行可能是错误的，自己手动删除</span>
+``输出文件第二行可能是错误的，自己手动删除``
