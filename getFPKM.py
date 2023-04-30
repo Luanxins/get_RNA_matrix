@@ -3,7 +3,7 @@
 """
 Created on Wed Apr 29 10:28:00 2020
 
-@author: Xinxin_Luan and BingAI
+@author: LuanXins and BingAI
 """
 
 import os
